@@ -1,15 +1,35 @@
 package model;
 
-public class Expense extends Transaction {
+public class Expense {
 
-    public Expense(int id, int userId, double amount,
-                   String category, String date, String description) {
+    private String username;
+    private double amount;
+    private String category;
+    private String date;
 
-        super(id, userId, amount, category, date, description);
+    // Constructor
+    public Expense(String username, double amount,
+                   String category, String date) {
+
+        this.username = username;
+        this.amount = amount;
+        this.category = category;
+        this.date = date;
     }
 
-    @Override
-    public String getType() {
-        return "EXPENSE";
+    public String getUsername() {
+        return username;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

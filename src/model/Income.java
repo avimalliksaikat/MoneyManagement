@@ -1,15 +1,39 @@
 package model;
 
-public class Income extends Transaction {
+public class Income {
 
-    public Income(int id, int userId, double amount,
-                  String category, String date, String description) {
+    private int id;
+    private String username;
+    private double amount;
+    private String source;
+    private String date;
 
-        super(id, userId, amount, category, date, description);
+    // Constructor
+    public Income(String username, double amount, String source, String date) {
+
+        this.username = username;
+        this.amount = amount;
+        this.source = source;
+        this.date = date;
     }
 
-    @Override
-    public String getType() {
-        return "INCOME";
+    // Get username
+    public String getUsername() {
+        return username;
+    }
+
+    // Get amount
+    public double getAmount() {
+        return amount;
+    }
+
+    // Get source
+    public String getSource() {
+        return source;
+    }
+
+    // Get date
+    public String getDate() {
+        return date;
     }
 }

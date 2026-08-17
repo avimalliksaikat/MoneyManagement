@@ -1,58 +1,44 @@
 package model;
 
-public abstract class Transaction {
+public class Transaction {
 
-    protected int id;
-    protected int userId;
-    protected double amount;
-    protected String category;
-    protected String date;
-    protected String description;
+    private String username;
+    private String type;
+    private double amount;
+    private String description;
+    private String date;
 
     // Constructor
-    public Transaction(int id, int userId, double amount,
-                       String category, String date, String description) {
+    public Transaction(String username,
+                       String type,
+                       double amount,
+                       String description,
+                       String date) {
 
-        this.id = id;
-        this.userId = userId;
+        this.username = username;
+        this.type = type;
         this.amount = amount;
-        this.category = category;
-        this.date = date;
         this.description = description;
+        this.date = date;
     }
 
-    // Abstract method
-    public abstract String getType();
-
-    // Getters
-    public int getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getType() {
+        return type;
     }
 
     public double getAmount() {
         return amount;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    // toString method
-    public String toString() {
-        return id + " | " + getType() + " | " + amount
-                + " | " + category + " | " + date
-                + " | " + description;
+    public String getDate() {
+        return date;
     }
 }
