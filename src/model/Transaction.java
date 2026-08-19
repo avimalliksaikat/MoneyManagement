@@ -8,7 +8,7 @@ public class Transaction {
     private String description;
     private String date;
 
-    // Constructor
+    
     public Transaction(String username,
                        String type,
                        double amount,
