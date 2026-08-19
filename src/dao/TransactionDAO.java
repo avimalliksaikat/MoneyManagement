@@ -20,7 +20,7 @@ public class TransactionDAO {
             Connection connection =
                 DatabaseConnection.getConnection();
 
-            // Get income
+            
             String incomeSQL =
                 "SELECT username, amount, source, date " +
                 "FROM income WHERE username = ?";
@@ -48,7 +48,7 @@ public class TransactionDAO {
             }
 
 
-            // Get expense
+           
             String expenseSQL =
                 "SELECT username, amount, category, date " +
                 "FROM expense WHERE username = ?";
