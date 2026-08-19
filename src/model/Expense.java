@@ -7,7 +7,7 @@ public class Expense {
     private String category;
     private String date;
 
-    // Constructor
+    
     public Expense(String username, double amount,
                    String category, String date) {
 
