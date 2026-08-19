@@ -8,7 +8,7 @@ public class Income {
     private String source;
     private String date;
 
-    // Constructor
+    
     public Income(String username, double amount, String source, String date) {
 
         this.username = username;
@@ -17,17 +17,17 @@ public class Income {
         this.date = date;
     }
 
-    // Get username
+    
     public String getUsername() {
         return username;
     }
 
-    // Get amount
+    
     public double getAmount() {
         return amount;
     }
 
-    // Get source
+    
     public String getSource() {
         return source;
     }
