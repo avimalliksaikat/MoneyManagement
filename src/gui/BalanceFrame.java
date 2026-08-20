@@ -22,12 +22,12 @@ public class BalanceFrame extends Frame {
         setLayout(new GridLayout(5, 2, 10, 10));
 
 
-        // Create BalanceDAO
+       
         BalanceDAO balanceDAO =
             new BalanceDAO();
 
 
-        // Get values from database
+        
         double totalIncome =
             balanceDAO.getTotalIncome(username);
 
@@ -38,7 +38,7 @@ public class BalanceFrame extends Frame {
             balanceDAO.getBalance(username);
 
 
-        // Labels
+        
         Label incomeLabel =
             new Label("Total Income:");
 
@@ -60,12 +60,12 @@ public class BalanceFrame extends Frame {
             new Label(String.format("%.2f", balance));
 
 
-        // Back button
+       
         Button backButton =
             new Button("Back");
 
 
-        // Add components
+       
         add(incomeLabel);
         add(incomeValue);
 
@@ -75,7 +75,7 @@ public class BalanceFrame extends Frame {
         add(balanceLabel);
         add(balanceValue);
 
-        // Empty spaces
+        
         add(new Label(""));
         add(new Label(""));
 
@@ -83,7 +83,7 @@ public class BalanceFrame extends Frame {
         add(backButton);
 
 
-        // Back button action
+        
         backButton.addActionListener(
             new ActionListener() {
 
@@ -97,7 +97,7 @@ public class BalanceFrame extends Frame {
         );
 
 
-        // Close window
+        
         addWindowListener(
             new WindowAdapter() {
 
