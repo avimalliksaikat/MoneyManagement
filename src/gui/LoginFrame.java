@@ -12,36 +12,36 @@ public class LoginFrame extends Frame {
 
     public LoginFrame() {
 
-        // Window title
+        
         setTitle("Money Management - Login");
 
-        // Window size
+        
         setSize(400, 300);
 
-        // Window position
+        
         setLocation(500, 250);
 
-        // Layout
+        
         setLayout(new GridLayout(4, 2, 10, 10));
 
-        // Username
+        
         Label usernameLabel = new Label("Username:");
         usernameField = new TextField();
 
-        // Password
+        
         Label passwordLabel = new Label("Password:");
         passwordField = new TextField();
 
-        // Hide password
+        
         passwordField.setEchoChar('*');
 
-        // Login button
+        
         Button loginButton = new Button("Login");
 
-        // Register button
+        
         Button registerButton = new Button("Register");
 
-        // Add components
+       
         add(usernameLabel);
         add(usernameField);
 
@@ -52,7 +52,7 @@ public class LoginFrame extends Frame {
         add(registerButton);
 
 
-        // Login button action
+       
         loginButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -68,15 +68,15 @@ public class LoginFrame extends Frame {
 
                 if (result) {
 
-                    // Close login window
+                   
                     dispose();
 
-                    // Open dashboard
+                    
                     new DashboardFrame(username);
 
                 } else {
 
-                    // Error message
+                 
                     Dialog dialog = new Dialog(
                         LoginFrame.this,
                         "Error",
@@ -115,23 +115,23 @@ public class LoginFrame extends Frame {
         });
 
 
-        // Register button action
+        
         registerButton.addActionListener(
             new ActionListener() {
 
                 public void actionPerformed(ActionEvent e) {
 
-                    // Close login window
+                   
                     dispose();
 
-                    // Open registration window
+                   
                     new RegisterFrame();
                 }
             }
         );
 
 
-        // Close window
+    
         addWindowListener(
             new WindowAdapter() {
 
