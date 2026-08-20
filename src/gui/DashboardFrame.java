@@ -15,7 +15,7 @@ public class DashboardFrame extends Frame {
 
         setLayout(new BorderLayout(10, 10));
 
-        // Welcome message
+    
         Label welcomeLabel = new Label(
             "Welcome, " + username + "!",
             Label.CENTER
@@ -27,7 +27,7 @@ public class DashboardFrame extends Frame {
 
         add(welcomeLabel, BorderLayout.NORTH);
 
-        // Buttons
+        
         Panel buttonPanel = new Panel();
 
         buttonPanel.setLayout(
@@ -96,7 +96,7 @@ balanceButton.addActionListener(
 
         add(buttonPanel, BorderLayout.CENTER);
 
-        // Logout
+        
         logoutButton.addActionListener(
             new ActionListener() {
 
@@ -109,7 +109,7 @@ balanceButton.addActionListener(
             }
         );
 
-        // Close window
+        
         addWindowListener(
             new WindowAdapter() {
 
