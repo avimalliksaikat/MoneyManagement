@@ -26,27 +26,27 @@ public class IncomeFrame extends Frame {
 
         setLayout(new GridLayout(4, 2, 10, 10));
 
-        // Amount
+        
         Label amountLabel = new Label("Amount:");
 
         amountField = new TextField();
 
-        // Source
+        
         Label sourceLabel = new Label("Source:");
 
         sourceField = new TextField();
 
-        // Date
+        
         Label dateLabel = new Label("Date:");
 
         dateField = new TextField();
 
-        // Buttons
+        
         Button addButton = new Button("Add Income");
 
         Button backButton = new Button("Back");
 
-        // Add components
+        
         add(amountLabel);
         add(amountField);
 
@@ -60,7 +60,7 @@ public class IncomeFrame extends Frame {
         add(backButton);
 
 
-        // Add Income button
+        
         addButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +69,7 @@ public class IncomeFrame extends Frame {
                 String source = sourceField.getText();
                 String date = dateField.getText();
 
-                // Check empty fields
+                
                 if (amountText.isEmpty() ||
                     source.isEmpty() ||
                     date.isEmpty()) {
@@ -123,7 +123,7 @@ public class IncomeFrame extends Frame {
         });
 
 
-        // Back button
+        
         backButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -135,7 +135,7 @@ public class IncomeFrame extends Frame {
         });
 
 
-        // Close window
+        
         addWindowListener(new WindowAdapter() {
 
             public void windowClosing(WindowEvent e) {
@@ -149,7 +149,7 @@ public class IncomeFrame extends Frame {
     }
 
 
-    // Message dialog
+    
     private void showMessage(String message) {
 
         Dialog dialog = new Dialog(
