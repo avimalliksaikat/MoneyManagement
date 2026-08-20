@@ -26,23 +26,23 @@ public class ExpenseFrame extends Frame {
 
         setLayout(new GridLayout(4, 2, 10, 10));
 
-        // Amount
+        
         Label amountLabel = new Label("Amount:");
         amountField = new TextField();
 
-        // Category
+        
         Label categoryLabel = new Label("Category:");
         categoryField = new TextField();
 
-        // Date
+        
         Label dateLabel = new Label("Date:");
         dateField = new TextField();
 
-        // Buttons
+        
         Button addButton = new Button("Add Expense");
         Button backButton = new Button("Back");
 
-        // Add components
+        
         add(amountLabel);
         add(amountField);
 
@@ -56,7 +56,7 @@ public class ExpenseFrame extends Frame {
         add(backButton);
 
 
-        // Add Expense button
+        
         addButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -65,7 +65,7 @@ public class ExpenseFrame extends Frame {
                 String category = categoryField.getText();
                 String date = dateField.getText();
 
-                // Check empty fields
+                
                 if (amountText.isEmpty() ||
                     category.isEmpty() ||
                     date.isEmpty()) {
@@ -119,7 +119,7 @@ public class ExpenseFrame extends Frame {
         });
 
 
-        // Back button
+        
         backButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
@@ -131,7 +131,7 @@ public class ExpenseFrame extends Frame {
         });
 
 
-        // Close window
+    
         addWindowListener(new WindowAdapter() {
 
             public void windowClosing(WindowEvent e) {
@@ -144,7 +144,7 @@ public class ExpenseFrame extends Frame {
     }
 
 
-    // Message dialog
+    
     private void showMessage(String message) {
 
         Dialog dialog = new Dialog(
