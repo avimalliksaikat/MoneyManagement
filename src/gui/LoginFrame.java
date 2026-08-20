@@ -143,7 +143,7 @@ public class LoginFrame extends Frame {
         );
 
 
-        // Show window
+       
         setVisible(true);
     }
 }
